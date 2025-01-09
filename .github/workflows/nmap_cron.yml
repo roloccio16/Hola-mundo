@@ -2,7 +2,7 @@ name: Nmap cron
 
 on: 
     schedule:
-        - cron: "10 * * * *"
+        - cron: "*/10 * * * *"
 jobs:
     scan:
         runs-on: ubuntu-latest
