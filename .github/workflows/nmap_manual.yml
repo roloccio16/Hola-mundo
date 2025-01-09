@@ -13,4 +13,9 @@ jobs:
             - name: "intalo nmap"
               run: sudo apt-get install nmap
             - name: "uso nmap"
-              run: nmap -sV mercadona.es
+              run: nmap -sV mercadona.es -oN nmap_report.txt
+            - name: subir reporte de escaneo
+              uses: actions/upload-artifact@v3
+              with:
+                name: nmap-scan
+                path: nmap_report.txt
