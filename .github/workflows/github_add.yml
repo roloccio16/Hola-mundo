@@ -3,7 +3,7 @@ name: Add File to Repo
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   add-file:
