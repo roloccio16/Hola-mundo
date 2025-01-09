@@ -5,7 +5,7 @@ on:
         branches:
           - main
 jobs:
-    hola:
+    hola: 
         runs-on: ubuntu-latest
         steps:
             - name: "instalar sshpass"
