@@ -1,0 +1,30 @@
+name: Add File to Repo
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  add-file:
+    permissions:
+        contents: write
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Generate a new file
+      run: |
+        echo "Este archivo fue generado automáticamente" > archivo_automatico.txt
+
+    - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add archivo_automatico.txt
+        git commit -m "Añadido archivo generado automáticamente"
+        git push
