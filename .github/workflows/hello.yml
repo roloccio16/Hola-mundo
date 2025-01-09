@@ -9,8 +9,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -name: Hola mundo
-              run: echo "Hola mundo"
+             run: echo "Hola mundo"
             -name: Instalar figlet
-              run: sudo apt-get install figlet
+             run: sudo apt-get install figlet
             -name: usar figlet
-              run: figlet "Hola mundo"
+             run: figlet "Hola mundo"
