@@ -1,0 +1,16 @@
+name: Nmap
+
+on: 
+    push:
+        branches:
+          - main
+jobs:
+    hola:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "nmap"
+              run: echo "nmap"
+            - name: "intalo nmap"
+              run: sudo apt-get install nmap
+            - name: "uso nmap"
+              run: nmap -sV mercadona.es
