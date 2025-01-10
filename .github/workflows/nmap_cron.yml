@@ -1,15 +1,14 @@
-name: Nmap cron
-
-on: 
-    schedule:
-        - cron: "*/10 * * * *"
-jobs:
-    scan:
-        runs-on: ubuntu-latest
-        steps:
-            - name: "nmap"
-              run: echo "nmap"
-            - name: "instalo nmap"
-              run: sudo apt-get install nmap
-            - name: "uso nmap"
-              run: sudo nmap -sS -p 22,80,443 nike.com -oN nmap_report.txt
+# name: Nmap cron
+# on: 
+#     schedule:
+#         - cron: "*/10 * * * *"
+# jobs:
+#     scan:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: "nmap"
+#               run: echo "nmap"
+#             - name: "instalo nmap"
+#               run: sudo apt-get install nmap
+#             - name: "uso nmap"
+#               run: sudo nmap -sS -p 22,80,443 nike.com -oN nmap_report.txt
